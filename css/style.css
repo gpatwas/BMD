@@ -1,0 +1,331 @@
+/*
+Theme Name: DJ Booking Theme
+Theme URI: 
+Author: Your Name
+Description: Custom theme for DJ Booking
+Version: 1.0
+License: GNU General Public License v2 or later
+Text Domain: dj-booking
+*/
+
+
+
+.suggestions-box {
+    position: absolute;
+    margin-top: 2.9rem;
+    background-color: #1e1b4b; /* Indigo-950 background */
+    border: 1px solid #ec4899; /* Tailwind pink-500 */
+    border-radius: 0.375rem; /* rounded-md */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 50;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.suggestion-item {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 0.875rem; /* text-sm */
+    color: #f9a8d4; /* pink-300 */
+}
+
+.suggestion-item:hover {
+    background-color: #312e81; /* indigo-800 */
+    color: #ec4899; /* pink-500 */
+}
+
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0f172a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.spinner {
+    width: 60px;
+    height: 60px;
+    border: 6px solid rgba(255, 255, 255, 0.2);
+    border-top: 6px solid #ec4899; /* Tailwind pink-500 */
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.header {
+    text-align: center;
+    padding: 80px 20px 40px;
+    background-color: #0f172a;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.header p {
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+.match-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.match-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.match-header h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.match-header p {
+    color: #ffffff;
+}
+
+.match-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center; /* Centers profiles */
+}
+
+.dj-profile {
+    background: #0f172a;
+    border-radius: 10px;
+    box-shadow: 4px 6px 8px rgba(213, 39, 119, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s;
+    width: 100%;
+    max-width: 400px; /* Limits width on larger screens */
+    min-width: 320px; /* Prevents profiles from shrinking too much */
+}
+
+.dj-profile:hover {
+    transform: translateY(-5px);
+}
+
+/* Profile image container */
+.profile-image-container {
+    width: 100%;
+    height: 250px; /* Fixed height for consistency */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+/* Image carousel */
+.image-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 10px;
+    padding: 10px;
+    scroll-behavior: smooth;
+    width: 100%;
+}
+
+.profile-image {
+    flex: 0 0 100%;
+    max-width: 100%;
+    height: 250px; /* Ensures all images have a consistent size */
+    object-fit: cover; /* Ensures proper cropping without distortion */
+    border-radius: 10px 10px 0 0;
+    scroll-snap-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Hide scrollbar */
+.image-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+/* Profile content */
+.profile-content {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Adjust grid for mobile */
+@media (max-width: 768px) {
+    .match-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .dj-profile {
+        max-width: 90%; /* Allows better spacing on smaller screens */
+    }
+}
+
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-content {
+    padding: 20px;
+}
+
+.profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.profile-header h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.match-percentage {
+    background: #db2777;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+}
+
+.rating {
+    color: #fbbf24;
+    margin-bottom: 15px;
+}
+
+.details {
+    margin-bottom: 20px;
+}
+
+.details p {
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.contact-button {
+    display: inline-block;
+    padding: 8px 20px;
+    margin-right: 10px;
+    background-color: #db2777;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+    margin-top: 10px;
+}
+
+.contact-button:hover {
+    background-color: pink-400;
+}
+
+.btn-center {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.goback-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #db2777;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+.goback-btn:hover {
+    background-color: pink-400;
+}
+
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2rem;
+    }
+    
+    .match-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.submit-button {
+    position: relative;
+}
+
+.submit-button.loading {
+    color: transparent;
+}
+
+.submit-button.loading::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ffffff;
+    border-top-color: transparent;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: button-loading-spinner 1s linear infinite;
+}
+
+@keyframes button-loading-spinner {
+    from {
+        transform: translate(-50%, -50%) rotate(0turn);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(1turn);
+    }
+}
+
+@layer utilities {
+    .bg-custom {
+      background-color: #f3f3f6;
+    }
+  }
+
+
+  /* Carousel container */
+.image-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 10px;
+    padding: 10px;
+    scroll-behavior: smooth;
+}
+
+.profile-image {
+    flex: 0 0 80%; 
+    max-width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    scroll-snap-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.image-carousel::-webkit-scrollbar {
+    display: none;
+}
+
