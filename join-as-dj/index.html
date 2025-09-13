@@ -84,22 +84,33 @@
     </head>
 
 <body>
-  <!-- Header -->
+<!-- Header -->
 <header class="sticky top-0 z-50 bg-gradient-to-r from-pink-700 via-purple-800 to-indigo-900 shadow-lg">
   <div class="max-w-7xl mx-auto flex justify-between items-center py-4 px-6 relative">
+    <!-- Logo -->
     <a href="https://bookmydjs.in/">
-      <img class="w-28" src="https://raw.githubusercontent.com/gpatwas/BMD/refs/heads/main/Images/Bmd_235X108-bg-removed.png" alt="Logo">
+      <img class="w-28" src="https://raw.githubusercontent.com/gpatwas/BMD/refs/heads/main/Images/Bmd_235X108-bg-removed.png" alt="BookMyDJs Logo">
     </a>
 
     <!-- Desktop Menu -->
-    <nav class="space-x-6 hidden md:block">
+    <nav class="space-x-6 hidden md:flex items-center">
       <a href="https://bookmydjs.in/" class="text-gray-100 hover:text-pink-300">Home</a>
       <a href="https://bookmydjs.in/blogs/" class="text-gray-100 hover:text-pink-300">Blogs</a>
       <a href="https://bookmydjs.in/contact/" class="text-gray-100 hover:text-pink-300">Contact</a>
+      <!-- Join as DJ Button -->
+      <a href="https://bookmydjs.in/join-as-dj/" 
+         class="ml-4 bg-pink-600 text-white px-4 py-2 rounded-lg shadow hover:bg-pink-500 transition duration-200">
+        Join as DJ
+      </a>
     </nav>
 
     <!-- Mobile Menu Button -->
-    <div class="md:hidden">
+    <div class="md:hidden flex items-center space-x-3">
+      <!--Join as DJ Button for Mobile -->
+      <a href="https://bookmydjs.in/join-as-dj/" 
+         class="bg-pink-600 text-white px-3 py-2 rounded-lg shadow hover:bg-pink-500 transition duration-200 text-sm">
+        Join as DJ
+      </a>
       <button id="menuToggle" class="text-pink-500 hover:text-pink-300 focus:outline-none">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
@@ -114,8 +125,12 @@
     <a href="https://bookmydjs.in/" class="block text-gray-100 hover:text-pink-300 font-medium">Home</a>
     <a href="https://bookmydjs.in/blogs/" class="block text-gray-100 hover:text-pink-300 font-medium">Blogs</a>
     <a href="https://bookmydjs.in/contact/" class="block text-gray-100 hover:text-pink-300 font-medium">Contact</a>
-  </div>
-</header>
+    <!-- Join as DJ inside mobile dropdown -->
+    <a href="https://bookmydjs.in/join-as-dj/" 
+       class="block text-gray-100 hover:text-pink-300 font-semibold mt-2">
+      Join as DJ
+    </a>
+  </div></header>
 
 <!-- Toggle Script -->
 <script>
@@ -325,4 +340,5 @@
   </a>
 </body>
 </html>
+
 
