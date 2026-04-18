@@ -240,17 +240,22 @@
             <div class="dj-profile">
                 <div class="profile-image-container">
                     <div class="image-carousel">
-                        <img src="https://raw.githubusercontent.com/gpatwas/BMD/refs/heads/main/Images/DJ-Ravz_1.jpeg" loading="lazy" alt="DJ Ravz" class="profile-image">
+                        <img src="https://raw.githubusercontent.com/gpatwas/BMD/refs/heads/main/Images/DJ-Ravz_1.jpeg" loading="lazy" alt="DJ Ravz" class="profile-image active">
                         <img src="https://raw.githubusercontent.com/gpatwas/BMD/refs/heads/main/Images/DJ-Ravz_2.jpeg" loading="lazy" alt="DJ Ravz Live On Stage" class="profile-image">
                         <img src="https://raw.githubusercontent.com/gpatwas/BMD/refs/heads/main/Images/DJ-Ravz_3.jpeg" loading="lazy" alt="DJ Ravz Hands Up" class="profile-image">
                         <img src="https://raw.githubusercontent.com/gpatwas/BMD/refs/heads/main/Images/DJ-Ravz_4.jpeg" loading="lazy" alt="DJ Ravz Hands up Live" class="profile-image">
                     </div>
+                  <!-- Navigation arrows -->
+                    <button class="carousel-arrow carousel-arrow-prev">&#10094;</button>
+                    <button class="carousel-arrow carousel-arrow-next">&#10095;</button>
+                    <!-- Dots indicator -->
+                    <div class="carousel-dots"></div>
                 </div>
                 <div class="profile-content">
                     <div class="profile-header">
                         <h3>DJ Ravz (Gourav)</h3>
                         <div class="match-percentage">98% Match</div>
-                    </div>
+                 			</div>   
                     <div class="rating">★★★★★ (4.9)</div>
                     <div class="details">
                         <p>Professional DJ with 8+ Years of Experience</p>
@@ -282,7 +287,88 @@
             setTimeout(function() {
                 document.querySelector('.loading-screen').style.display = 'none';
             }, 2000);
+           // Initialize carousels after page loads
+            initCarousels();
         });
+
+        // Carousel functionality
+        function initCarousels() {
+            const profileContainers = document.querySelectorAll('.profile-image-container');
+            
+            profileContainers.forEach(container => {
+                const carousel = container.querySelector('.image-carousel');
+                const images = carousel.querySelectorAll('.profile-image');
+                const prevBtn = container.querySelector('.carousel-arrow-prev');
+                const nextBtn = container.querySelector('.carousel-arrow-next');
+                const dotsContainer = container.querySelector('.carousel-dots');
+                
+                let currentIndex = 0;
+                
+                // Create dots
+                images.forEach((_, index) => {
+                    const dot = document.createElement('div');
+                    dot.classList.add('carousel-dot');
+                    if (index === 0) dot.classList.add('active');
+                    dot.addEventListener('click', () => {
+                        goToSlide(index);
+                    });
+                    dotsContainer.appendChild(dot);
+                });
+                
+                const dots = dotsContainer.querySelectorAll('.carousel-dot');
+                
+                // Function to show a specific slide
+                function goToSlide(index) {
+                    // Hide all images
+                    images.forEach(img => {
+                        img.classList.remove('active');
+                    });
+                    
+                    // Remove active class from all dots
+                    dots.forEach(dot => {
+                        dot.classList.remove('active');
+                    });
+                    
+                    // Show selected image
+                    images[index].classList.add('active');
+                    
+                    // Activate corresponding dot
+                    dots[index].classList.add('active');
+                    
+                    currentIndex = index;
+                }
+                
+                // Next slide
+                function nextSlide() {
+                    let newIndex = currentIndex + 1;
+                    if (newIndex >= images.length) newIndex = 0;
+                    goToSlide(newIndex);
+                }
+                
+                // Previous slide
+                function prevSlide() {
+                    let newIndex = currentIndex - 1;
+                    if (newIndex < 0) newIndex = images.length - 1;
+                    goToSlide(newIndex);
+                }
+                
+                // Event listeners for arrows
+                nextBtn.addEventListener('click', nextSlide);
+                prevBtn.addEventListener('click', prevSlide);
+                
+                // Auto-advance slides (optional)
+                let slideInterval = setInterval(nextSlide, 5000);
+                
+                // Pause auto-advancement when hovering over carousel
+                container.addEventListener('mouseenter', () => {
+                    clearInterval(slideInterval);
+                });
+                
+                container.addEventListener('mouseleave', () => {
+                    slideInterval = setInterval(nextSlide, 5000);
+                });
+            });
+        }
     </script>
     <!-- Why Choose Us -->
 <div class="py-20 bg-gray-950">
