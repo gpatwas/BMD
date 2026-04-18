@@ -1125,6 +1125,17 @@
 setTimeout(() => {
   document.getElementById("whatsappCTA").classList.add("show");
 }, 1000);
+    
+/* 📊 Google Analytics GA4 Click Tracking */
+document.getElementById("whatsappCTA").addEventListener("click", function () {
+  if (typeof gtag === "function") {
+    gtag('event', 'whatsapp_click', {
+      event_category: 'CTA',
+      event_label: 'WhatsApp Floating Button',
+      value: 1
+    });
+  }
+});
 </script>
 
 </body>
