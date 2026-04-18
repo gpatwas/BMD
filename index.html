@@ -1022,7 +1022,7 @@
 .whatsapp-cta {
   position: fixed;
   bottom: 20px;
-  right: 20px;
+  right: -350px; /* hidden initially */
 
   display: flex;
   align-items: center;
@@ -1040,18 +1040,26 @@
 
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
   z-index: 9999;
   min-width: 280px;
 
-  /* Pulse Animation */
+  opacity: 0;
+}
+
+/* When visible */
+.whatsapp-cta.show {
+  right: 20px;
+  opacity: 1;
+
+  /* start pulse only after appearing */
   animation: pulseGlow 2s infinite;
 }
 
 .whatsapp-cta:hover {
   transform: translateY(-2px) scale(1.03);
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
-  animation: none; /* stop pulse on hover for better UX */
+  animation: none;
 }
 
 /* Text */
@@ -1060,7 +1068,7 @@
   white-space: nowrap;
 }
 
-/* Icon Circle */
+/* Icon */
 .cta-icon {
   background: #ffffff;
   color: #25D366;
@@ -1076,7 +1084,7 @@
   font-size: 18px;
 }
 
-/* 🔥 Pulse Animation Keyframes */
+/* Pulse */
 @keyframes pulseGlow {
   0% {
     box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
@@ -1096,16 +1104,13 @@
     padding: 12px 14px;
     font-size: 14px;
   }
-
-  .cta-text {
-    font-size: 14px;
-  }
 }
 </style>
 
-<!-- WhatsApp CTA -->
+<!-- CTA -->
 <a href="https://wa.me/919481543530?text=Hi%2C%20I'm%20looking%20for%20a%20DJ." 
    class="whatsapp-cta" 
+   id="whatsappCTA"
    target="_blank" 
    rel="noopener">
 
@@ -1114,6 +1119,13 @@
      <i class="fab fa-whatsapp"></i>
    </span>
 </a>
+
+<script>
+/* ⏳ Auto slide-in after 5 seconds */
+setTimeout(() => {
+  document.getElementById("whatsappCTA").classList.add("show");
+}, 5000);
+</script>
 
 </body>
     </html>
