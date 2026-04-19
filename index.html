@@ -30,12 +30,28 @@
 </script>
         <meta charset="UTF-8">
         <meta name="description" content="Find the best DJ in Bangalore for weddings, private parties & corporate events. Compare quotes, view reviews & hire your perfect DJ effortlessly!">
-        <meta name="keywords" content="DJ in Bangalore, DJ hire Bengaluru, best DJs in Bengaluru, wedding DJs Bengaluru, party DJs Bengaluru, affordable DJ services, DJ booking Bangalore, event DJ hire, professional DJs Bengaluru, DJ for weddings, club DJs Bangalore, DJ in Bangalore for events, DJ services Bangalore, Bangalore DJ booking online, DJ for party in Bangalore, book a DJ in Bengaluru, top DJs in Bangalore, DJ for engagement party Bengaluru, corporate event DJ Bangalore, best DJ for weddings in Bangalore, birthday party DJ Bangalore, live DJ hire Bangalore, DJ sound system rental Bangalore, experienced DJs in Bengaluru, female DJs Bangalore, local DJs in Bangalore, Bangalore DJ price, Bangalore DJ quotes, wedding reception DJ Bangalore, DJ with lighting Bangalore, DJ for Sangeet night Bengaluru">
-        <meta name="keywords" content="DJ service near me, Mobile DJ Bengaluru, DJ service Bengaluru, Wedding DJ Bengaluru, Party DJ Bengaluru, Event DJ Bengaluru, DJ for hire Bengaluru, Best DJ Bengaluru, Professional DJ service, Event DJ, Party DJ, Wedding DJ, Corporate event DJ, Private party DJ, Birthday party DJ, Wedding reception DJ, Corporate party DJ, Anniversary party DJ, Graduation party DJ, Holiday party DJ, Book Wedding DJ in Bangalore">
-        <meta name="keywords" content="DJ in Bangalore, DJ Bangalore, hire DJ Bangalore, wedding DJ Bangalore, corporate DJ Bangalore, private party DJ Bangalore, birthday party DJ Bangalore, top DJs Bangalore, best DJ in Bengaluru, affordable DJ Bangalore, book DJ Bangalore, DJ for events in Bangalore, DJ for Sangeet Bangalore, DJ for Mehndi function, DJ for engagement party, female DJs Bangalore, club DJ Bangalore, DJ sound and lighting Bangalore, mobile DJ Bangalore, Bangalore DJ booking, professional DJ services Bangalore, live DJ Bangalore, DJ for house party Bangalore, Bangalore event entertainment, DJ packages Bangalore, DJ rental Bangalore, party DJ hire Bangalore">
+        <meta name="keywords" content="DJ in Bangalore, DJ hire Bengaluru, best DJs in Bengaluru, wedding DJs Bengaluru, party DJs Bengaluru, affordable DJ services, DJ booking Bangalore, event DJ hire, professional DJs Bengaluru, DJ for weddings, club DJs Bangalore, DJ services Bangalore, top DJs in Bangalore, corporate event DJ Bangalore, birthday party DJ Bangalore, female DJs Bangalore, Bangalore DJ price, wedding reception DJ Bangalore, DJ with lighting Bangalore, DJ for Sangeet night Bengaluru, DJ for Mehndi function, DJ for engagement party, mobile DJ Bangalore, DJ packages Bangalore, DJ rental Bangalore">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Hire Top DJs in Bangalore for Weddings, Events & Parties | BookMyDJs</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+
+        <!-- Perf: preconnect to critical 3rd-party origins -->
+        <link rel="preconnect" href="https://raw.githubusercontent.com" crossorigin>
+        <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+        <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+        <link rel="preconnect" href="https://www.googletagmanager.com">
+        <link rel="dns-prefetch" href="https://www.google-analytics.com">
+
+        <!-- Perf: preload hero LCP image so it starts downloading before CSS parses -->
+        <link rel="preload" as="image"
+              href="https://raw.githubusercontent.com/gpatwas/BMD/refs/heads/main/Images/book-dj-in-bangalore.webp"
+              fetchpriority="high">
+
+        <!-- Perf: load Tailwind CSS without blocking render (print/onload swap) -->
+        <link rel="stylesheet"
+              href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+              media="print" onload="this.media='all'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"></noscript>
+
         <link rel="icon" href="https://raw.githubusercontent.com/gpatwas/BMD/refs/heads/main/Images/Bmd%20X300.png">
         <link rel="canonical" href="https://bookmydjs.in/"/>
         <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
@@ -113,7 +129,7 @@
   <div class="max-w-7xl mx-auto flex justify-between items-center py-4 px-6 relative">
     <!-- Logo -->
     <a href="https://bookmydjs.in/">
-      <img class="w-28" src="https://raw.githubusercontent.com/gpatwas/BMD/refs/heads/main/Images/Bmd_235X108-bg-removed.png" alt="BookMyDJs Logo">
+      <img class="w-28" src="https://raw.githubusercontent.com/gpatwas/BMD/refs/heads/main/Images/Bmd_235X108-bg-removed.png" alt="BookMyDJs Logo" width="235" height="108" decoding="async">
     </a>
 
     <!-- Desktop Menu -->
@@ -166,7 +182,7 @@
 </script>
 <!-- Hero Section with Form -->
   <section class="relative h-screen flex items-center justify-center text-center">
-    <img src="https://raw.githubusercontent.com/gpatwas/BMD/refs/heads/main/Images/book-dj-in-bangalore.webp" alt="DJ in Bangalore" class="absolute inset-0 object-cover w-full h-full">
+    <img src="https://raw.githubusercontent.com/gpatwas/BMD/refs/heads/main/Images/book-dj-in-bangalore.webp" alt="DJ in Bangalore" class="absolute inset-0 object-cover w-full h-full" width="1920" height="1080" fetchpriority="high" decoding="async">
     <div class="absolute inset-0 bg-black opacity-60"></div>
     <div class="relative z-10 max-w-2xl p-8 glass">
       <h1 class="text-4xl md:text-6xl font-bold mb-6">Find Your Perfect DJ in Bangalore</h1>
@@ -1011,11 +1027,14 @@
     </div>
   </div>
 </div>
-        <script type="text/javascript" src="https://bookmydjs.in/js/dj-booking-script.js"></script>  
+        <script defer src="https://bookmydjs.in/js/dj-booking-script.js"></script>
     
     
-<!-- Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<!-- Font Awesome (loaded async — only the WhatsApp icon below the fold needs it) -->
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 
 <style>
 /* CTA Button */
