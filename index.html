@@ -1099,10 +1099,28 @@
 
 /* Mobile */
 @media (max-width: 480px) {
+
   .whatsapp-cta {
+    right: -250px;      /* hidden position before animation */
+    bottom: 15px;
     min-width: auto;
-    padding: 12px 14px;
-    font-size: 14px;
+    padding: 8px 12px;
+    font-size: 13px;
+    border-radius: 40px;
+  }
+
+  .cta-text {
+    margin-right: 8px;
+  }
+
+  .cta-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+  }
+
+  .whatsapp-cta.show {
+    right: 10px;        /* visible position on mobile */
   }
 }
 </style>
