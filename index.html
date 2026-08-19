@@ -1055,6 +1055,14 @@
   animation: pulseGlow 2s infinite;
 }
 
+/* Never allow the WhatsApp CTA to cover the booking form */
+.whatsapp-cta.form-modal-open {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
 .whatsapp-cta:hover {
   transform: translateY(-2px) scale(1.03);
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
@@ -1138,10 +1146,40 @@
 </a>
 
 <script>
-/* ⏳ Auto slide-in after 5 seconds */
-setTimeout(() => {
-  document.getElementById("whatsappCTA").classList.add("show");
-}, 1000);
+/* ⏳ Auto slide-in after 1 second — only when the booking form is closed */
+const formModal = document.getElementById("formModal");
+const whatsappCTA = document.getElementById("whatsappCTA");
+
+if (whatsappCTA && formModal) {
+  const updateWhatsAppVisibility = () => {
+    /* Treat the form as open whenever its hidden class is removed or it is explicitly displayed. */
+    const formOpen =
+      !formModal.classList.contains("hidden") ||
+      getComputedStyle(formModal).display !== "none";
+
+    if (formOpen) {
+      /* Inline display:none is intentional: it guarantees the CTA cannot overlap the form
+         even if another script later adds/removes the CTA's .show class. */
+      whatsappCTA.classList.remove("show");
+      whatsappCTA.classList.add("form-modal-open");
+      whatsappCTA.style.setProperty("display", "none", "important");
+    } else {
+      whatsappCTA.classList.remove("form-modal-open");
+      whatsappCTA.style.removeProperty("display");
+      whatsappCTA.classList.add("show");
+    }
+  };
+
+  updateWhatsAppVisibility();
+
+  /* Watch all attributes that a modal-opening script could change. */
+  new MutationObserver(updateWhatsAppVisibility).observe(formModal, {
+    attributes: true,
+    attributeFilter: ["class", "style", "aria-hidden"]
+  });
+
+  setTimeout(updateWhatsAppVisibility, 1000);
+}
     
 /* 📊 Google Analytics GA4 Click Tracking */
 document.getElementById("whatsappCTA").addEventListener("click", function () {
