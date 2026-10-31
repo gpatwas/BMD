@@ -1,0 +1,90 @@
+/* Floating WhatsApp button – shared by every page (markup: a.whatsapp-cta#whatsappCTA) */
+.whatsapp-cta {
+  position: fixed;
+  right: -360px; /* off-screen until js/whatsapp-cta.js adds .show */
+  bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 10px 10px 20px;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #25D366, #1ebe5d);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  transition: right 0.5s ease, opacity 0.5s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.whatsapp-cta.show {
+  right: 20px;
+  opacity: 1;
+  animation: whatsappPulse 2s ease-out 1s 3; /* three gentle pulses after it slides in */
+}
+
+/* Never cover the booking form */
+.whatsapp-cta.form-modal-open {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+.whatsapp-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp-cta:focus-visible {
+  outline: 3px solid #f9a8d4; /* pink-300 */
+  outline-offset: 3px;
+}
+
+.whatsapp-cta .cta-text {
+  white-space: nowrap;
+}
+
+.whatsapp-cta .cta-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #fff;
+  color: #25D366;
+}
+
+.whatsapp-cta .cta-icon svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}
+
+@keyframes whatsappPulse {
+  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
+  70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+@media (max-width: 480px) {
+  .whatsapp-cta {
+    bottom: calc(14px + env(safe-area-inset-bottom, 0px));
+    gap: 8px;
+    padding: 6px 6px 6px 14px;
+    font-size: 13px;
+  }
+  .whatsapp-cta.show { right: 12px; }
+  .whatsapp-cta .cta-icon { width: 32px; height: 32px; }
+  .whatsapp-cta .cta-icon svg { width: 18px; height: 18px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .whatsapp-cta, .whatsapp-cta.show { transition: none; animation: none; }
+  .whatsapp-cta:hover { transform: none; }
+}
