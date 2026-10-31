@@ -88,3 +88,29 @@
   .whatsapp-cta, .whatsapp-cta.show { transition: none; animation: none; }
   .whatsapp-cta:hover { transform: none; }
 }
+
+/* Icon-only variant (a.whatsapp-cta.whatsapp-cta--icon): a round green button with no text, used where the pill would cover content */
+.whatsapp-cta.whatsapp-cta--icon {
+  gap: 0;
+  padding: 0;
+  width: 56px;
+  height: 56px;
+  justify-content: center;
+}
+
+.whatsapp-cta--icon .cta-icon {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  color: #fff;
+}
+
+.whatsapp-cta--icon .cta-icon svg {
+  width: 30px;
+  height: 30px;
+}
+
+@media (max-width: 480px) {
+  .whatsapp-cta.whatsapp-cta--icon { width: 52px; height: 52px; }
+  .whatsapp-cta--icon .cta-icon svg { width: 28px; height: 28px; }
+}
