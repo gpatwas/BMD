@@ -252,8 +252,7 @@
 }
   </script>
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-  <link rel="stylesheet" href="https://bookmydjs.in/css/whatsapp-cta.css">
+  <link rel="stylesheet" href="https://bookmydjs.in/css/bookmydjs.min.css">
 
 
 
@@ -279,27 +278,51 @@
 <!-- Header -->
 <header class="sticky top-0 z-50 bg-gradient-to-r from-pink-700 via-purple-800 to-indigo-900 shadow-lg">
   <div class="max-w-7xl mx-auto flex justify-between items-center py-4 px-6 relative">
+    <!-- Logo -->
     <a href="https://bookmydjs.in/">
-      <img width="235" height="108" decoding="async" class="w-28" src="https://bookmydjs.in/Images/Bmd_235X108-bg-removed.png" alt="BookMyDJs Logo">
+      <img width="235" height="108" decoding="async" class="w-28" src="https://bookmydjs.in/Images/bmd-logo-white.png" alt="BookMyDJs Logo">
     </a>
-    <nav class="space-x-6 hidden md:flex items-center">
+
+    <!-- Desktop Menu -->
+    <nav class="space-x-6 hidden md:flex items-center" aria-label="Main menu">
       <a href="https://bookmydjs.in/" class="text-gray-100 hover:text-pink-300">Home</a>
-      <a href="https://bookmydjs.in/blogs/" class="text-gray-100 hover:text-pink-300">Blogs</a>
+      <div class="nav-dd">
+        <button type="button" class="nav-dd-btn" aria-haspopup="true">Events <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.17l3.71-3.94a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg></button>
+        <div class="nav-dd-menu"><div class="nav-dd-panel"><a href="https://bookmydjs.in/events/wedding-dj-bangalore/">Wedding DJs</a><a href="https://bookmydjs.in/events/sangeet-dj-bangalore/">Sangeet DJs</a><a href="https://bookmydjs.in/events/mehendi-dj-bangalore/">Mehendi DJs</a><a href="https://bookmydjs.in/events/reception-dj-bangalore/">Wedding Reception DJs</a><a href="https://bookmydjs.in/events/corporate-dj-bangalore/">Corporate Event DJs</a><a href="https://bookmydjs.in/events/birthday-dj-bangalore/">Birthday Party DJs</a><a href="https://bookmydjs.in/events/anniversary-dj-bangalore/">Anniversary Party DJs</a><a href="https://bookmydjs.in/events/house-party-dj-bangalore/">House Party DJs</a></div></div>
+      </div>
+      <div class="nav-dd">
+        <button type="button" class="nav-dd-btn" aria-haspopup="true">Areas <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.17l3.71-3.94a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg></button>
+        <div class="nav-dd-menu"><div class="nav-dd-panel nav-dd-panel--cols"><a href="https://bookmydjs.in/locations/dj-in-koramangala/">DJ in Koramangala</a><a href="https://bookmydjs.in/locations/dj-in-indiranagar/">DJ in Indiranagar</a><a href="https://bookmydjs.in/locations/dj-in-whitefield/">DJ in Whitefield</a><a href="https://bookmydjs.in/locations/dj-in-hsr-layout/">DJ in HSR Layout</a><a href="https://bookmydjs.in/locations/dj-in-marathahalli/">DJ in Marathahalli</a><a href="https://bookmydjs.in/locations/dj-in-electronic-city/">DJ in Electronic City</a><a href="https://bookmydjs.in/locations/dj-in-jp-nagar/">DJ in JP Nagar</a><a href="https://bookmydjs.in/locations/dj-in-jayanagar/">DJ in Jayanagar</a><a href="https://bookmydjs.in/locations/dj-in-btm-layout/">DJ in BTM Layout</a><a href="https://bookmydjs.in/locations/dj-in-sarjapur-road/">DJ in Sarjapur Road</a><a href="https://bookmydjs.in/locations/dj-in-bellandur/">DJ in Bellandur</a><a href="https://bookmydjs.in/locations/dj-in-mg-road/">DJ in MG Road</a><a href="https://bookmydjs.in/locations/dj-in-hebbal/">DJ in Hebbal</a><a href="https://bookmydjs.in/locations/dj-in-yelahanka/">DJ in Yelahanka</a><a href="https://bookmydjs.in/locations/dj-in-banashankari/">DJ in Banashankari</a><a href="https://bookmydjs.in/locations/dj-in-rajajinagar/">DJ in Rajajinagar</a><a href="https://bookmydjs.in/locations/dj-in-malleshwaram/">DJ in Malleshwaram</a><a href="https://bookmydjs.in/locations/dj-in-bannerghatta-road/">DJ in Bannerghatta Road</a><a href="https://bookmydjs.in/locations/dj-in-ulsoor/">DJ in Ulsoor</a><a href="https://bookmydjs.in/locations/dj-in-domlur/">DJ in Domlur</a></div></div>
+      </div>
+      <a href="https://bookmydjs.in/blogs/" class="text-gray-100 hover:text-pink-300">Blog</a>
       <a href="https://bookmydjs.in/contact/" class="text-gray-100 hover:text-pink-300">Contact</a>
+      <!-- Join as DJ Button -->
       <a href="https://bookmydjs.in/join-as-dj/" class="ml-4 bg-pink-600 text-white px-4 py-2 rounded-lg shadow hover:bg-pink-500 transition duration-200">Join as DJ</a>
     </nav>
+
+    <!-- Mobile Menu Button -->
     <div class="md:hidden flex items-center space-x-3">
       <a href="https://bookmydjs.in/join-as-dj/" class="bg-pink-600 text-white px-3 py-2 rounded-lg shadow hover:bg-pink-500 transition duration-200 text-sm">Join as DJ</a>
-      <button id="menuToggle" class="text-pink-500 hover:text-pink-300 focus:outline-none">
+      <button id="menuToggle" class="text-pink-200 hover:text-white focus:outline-none" aria-label="Open menu">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
         </svg>
       </button>
     </div>
   </div>
+
+  <!-- Mobile Dropdown Menu with Same Gradient -->
   <div id="mobileMenu" class="hidden absolute top-full left-0 w-full bg-gradient-to-r from-pink-700 via-purple-800 to-indigo-900 md:hidden flex-col space-y-2 py-4 px-6 z-50 shadow-lg">
     <a href="https://bookmydjs.in/" class="block text-gray-100 hover:text-pink-300 font-medium">Home</a>
-    <a href="https://bookmydjs.in/blogs/" class="block text-gray-100 hover:text-pink-300 font-medium">Blogs</a>
+    <details class="nav-acc">
+      <summary>Events</summary>
+      <div class="nav-acc-links"><a href="https://bookmydjs.in/events/wedding-dj-bangalore/">Wedding DJs</a><a href="https://bookmydjs.in/events/sangeet-dj-bangalore/">Sangeet DJs</a><a href="https://bookmydjs.in/events/mehendi-dj-bangalore/">Mehendi DJs</a><a href="https://bookmydjs.in/events/reception-dj-bangalore/">Wedding Reception DJs</a><a href="https://bookmydjs.in/events/corporate-dj-bangalore/">Corporate Event DJs</a><a href="https://bookmydjs.in/events/birthday-dj-bangalore/">Birthday Party DJs</a><a href="https://bookmydjs.in/events/anniversary-dj-bangalore/">Anniversary Party DJs</a><a href="https://bookmydjs.in/events/house-party-dj-bangalore/">House Party DJs</a></div>
+    </details>
+    <details class="nav-acc">
+      <summary>Areas</summary>
+      <div class="nav-acc-links nav-acc-links--cols"><a href="https://bookmydjs.in/locations/dj-in-koramangala/">DJ in Koramangala</a><a href="https://bookmydjs.in/locations/dj-in-indiranagar/">DJ in Indiranagar</a><a href="https://bookmydjs.in/locations/dj-in-whitefield/">DJ in Whitefield</a><a href="https://bookmydjs.in/locations/dj-in-hsr-layout/">DJ in HSR Layout</a><a href="https://bookmydjs.in/locations/dj-in-marathahalli/">DJ in Marathahalli</a><a href="https://bookmydjs.in/locations/dj-in-electronic-city/">DJ in Electronic City</a><a href="https://bookmydjs.in/locations/dj-in-jp-nagar/">DJ in JP Nagar</a><a href="https://bookmydjs.in/locations/dj-in-jayanagar/">DJ in Jayanagar</a><a href="https://bookmydjs.in/locations/dj-in-btm-layout/">DJ in BTM Layout</a><a href="https://bookmydjs.in/locations/dj-in-sarjapur-road/">DJ in Sarjapur Road</a><a href="https://bookmydjs.in/locations/dj-in-bellandur/">DJ in Bellandur</a><a href="https://bookmydjs.in/locations/dj-in-mg-road/">DJ in MG Road</a><a href="https://bookmydjs.in/locations/dj-in-hebbal/">DJ in Hebbal</a><a href="https://bookmydjs.in/locations/dj-in-yelahanka/">DJ in Yelahanka</a><a href="https://bookmydjs.in/locations/dj-in-banashankari/">DJ in Banashankari</a><a href="https://bookmydjs.in/locations/dj-in-rajajinagar/">DJ in Rajajinagar</a><a href="https://bookmydjs.in/locations/dj-in-malleshwaram/">DJ in Malleshwaram</a><a href="https://bookmydjs.in/locations/dj-in-bannerghatta-road/">DJ in Bannerghatta Road</a><a href="https://bookmydjs.in/locations/dj-in-ulsoor/">DJ in Ulsoor</a><a href="https://bookmydjs.in/locations/dj-in-domlur/">DJ in Domlur</a></div>
+    </details>
+    <a href="https://bookmydjs.in/blogs/" class="block text-gray-100 hover:text-pink-300 font-medium">Blog</a>
     <a href="https://bookmydjs.in/contact/" class="block text-gray-100 hover:text-pink-300 font-medium">Contact</a>
     <a href="https://bookmydjs.in/join-as-dj/" class="block text-gray-100 hover:text-pink-300 font-semibold mt-2">Join as DJ</a>
   </div>
@@ -317,7 +340,7 @@
   <p class="text-lg mb-8 text-center text-gray-300">Bellandur sits at the heart of Bangalore's IT belt with proximity to Outer Ring Road tech parks. We provide DJs for corporate events, lakeside celebrations, and weddings at premium ORR hotels.</p>
 
   <div class="text-center mb-12">
-    <a href="https://bookmydjs.in/contact/" class="inline-block bg-pink-600 hover:bg-pink-500 text-white px-8 py-4 rounded-lg text-lg shadow font-semibold">Get a Free DJ Quote for Bellandur</a>
+    <a href="https://bookmydjs.in/?area=Bellandur#book" class="inline-block bg-pink-600 hover:bg-pink-500 text-white px-8 py-4 rounded-lg text-lg shadow font-semibold">Get a Free DJ Quote for Bellandur</a>
   </div>
 
   <!-- Local Venues -->
@@ -372,7 +395,7 @@
   <div class="text-center mt-10">
     <h2 class="text-2xl font-bold mb-4">Ready to Book Your Bellandur DJ?</h2>
     <p class="text-gray-300 mb-6">Get a free, no-obligation quote in minutes.</p>
-    <a href="https://bookmydjs.in/contact/" class="inline-block bg-pink-600 hover:bg-pink-500 text-white px-8 py-4 rounded-lg text-lg shadow font-semibold">Get Free Quote</a>
+    <a href="https://bookmydjs.in/?area=Bellandur#book" class="inline-block bg-pink-600 hover:bg-pink-500 text-white px-8 py-4 rounded-lg text-lg shadow font-semibold">Get Free Quote</a>
   </div>
 </main>
 
@@ -382,17 +405,17 @@
     <h2 class="text-3xl md:text-4xl font-bold mb-12">How It Works</h2>
     <div class="grid md:grid-cols-3 gap-8">
       <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-        <div class="text-pink-400 text-3xl mb-4"><i class="fas fa-search"></i></div>
+        <div class="text-pink-400 text-3xl mb-4"><svg class="inline-block" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg></div>
         <h3 class="text-xl font-semibold mb-2">Tell Us Your Need</h3>
         <p class="text-gray-400">Share your event details, Bellandur venue, and music preferences.</p>
       </div>
       <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-        <div class="text-pink-400 text-3xl mb-4"><i class="fas fa-comments"></i></div>
+        <div class="text-pink-400 text-3xl mb-4"><svg class="inline-block" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"/></svg></div>
         <h3 class="text-xl font-semibold mb-2">Receive Free Quotes</h3>
         <p class="text-gray-400">We match you with top DJs available in Bellandur.</p>
       </div>
       <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
-        <div class="text-pink-400 text-3xl mb-4"><i class="fas fa-music"></i></div>
+        <div class="text-pink-400 text-3xl mb-4"><svg class="inline-block" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/></svg></div>
         <h3 class="text-xl font-semibold mb-2">Book Your DJ</h3>
         <p class="text-gray-400">Choose based on reviews, rates, and experience.</p>
       </div>
@@ -493,8 +516,6 @@
       </div>
     </footer>
 
-<!-- Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <!-- WhatsApp Floating Button -->
 <a href="https://wa.me/919481543530?text=Hi%2C%20I'm%20looking%20for%20a%20DJ%20in%20Bellandur." class="whatsapp-cta" id="whatsappCTA" target="_blank" rel="noopener" aria-label="Chat with BookMyDJs on WhatsApp – get free DJ quotes in minutes" onclick="if(typeof gtag==='function'){gtag('event','whatsapp_click',{'event_category':'engagement','event_label':'dj-in-bellandur','transport_type':'beacon'});}">

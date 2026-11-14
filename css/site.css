@@ -1,0 +1,141 @@
+/* Shared site styles: header dropdown menus, mobile menu groups, inline form messages, booking review */
+
+/* ---- Desktop dropdowns (Events, Areas) ---- */
+.nav-dd { position: relative; }
+
+.nav-dd-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  color: #f3f4f6; /* gray-100 */
+  cursor: pointer;
+}
+
+.nav-dd-btn:hover,
+.nav-dd:focus-within .nav-dd-btn { color: #f9a8d4; /* pink-300 */ }
+
+.nav-dd-btn svg { width: 14px; height: 14px; transition: transform 0.2s ease; }
+.nav-dd:hover .nav-dd-btn svg,
+.nav-dd:focus-within .nav-dd-btn svg { transform: rotate(180deg); }
+
+.nav-dd-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-top: 14px; /* keeps the menu open while the mouse moves down to it */
+  z-index: 60;
+}
+
+.nav-dd:hover .nav-dd-menu,
+.nav-dd:focus-within .nav-dd-menu { display: block; }
+
+.nav-dd-panel {
+  min-width: 14rem;
+  padding: 0.5rem;
+  border: 1px solid rgba(236, 72, 153, 0.4); /* pink-500 */
+  border-radius: 0.75rem;
+  background: #1e1b4b; /* indigo-950 */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+}
+
+.nav-dd-panel--cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-width: 26rem;
+}
+
+.nav-dd-panel a {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  color: #e5e7eb; /* gray-200 */
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.nav-dd-panel a:hover,
+.nav-dd-panel a:focus-visible { background: #312e81; color: #f9a8d4; outline: none; }
+
+/* ---- Mobile menu groups ---- */
+#mobileMenu { max-height: calc(100vh - 5rem); overflow-y: auto; }
+
+.nav-acc summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #f3f4f6;
+  font-weight: 500;
+  cursor: pointer;
+  list-style: none;
+}
+
+.nav-acc summary::-webkit-details-marker { display: none; }
+
+.nav-acc summary::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  margin-right: 4px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+  transition: transform 0.2s ease;
+}
+
+.nav-acc[open] summary::after { transform: rotate(225deg); }
+
+.nav-acc-links {
+  display: grid;
+  gap: 0.35rem 1rem;
+  padding: 0.6rem 0 0.25rem 0.75rem;
+}
+
+.nav-acc-links--cols { grid-template-columns: 1fr 1fr; }
+
+.nav-acc-links a { color: #e5e7eb; font-size: 0.9rem; }
+.nav-acc-links a:hover { color: #f9a8d4; }
+
+/* ---- Inline form messages (contact, join) ---- */
+.form-note {
+  margin-top: 1rem;
+  padding: 0.9rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.form-note--ok { border: 1px solid #34d399; background: rgba(16, 185, 129, 0.12); color: #a7f3d0; }
+.form-note--error { border: 1px solid #f87171; background: rgba(239, 68, 68, 0.12); color: #fecaca; }
+
+/* ---- Booking form review step ---- */
+.review-list { margin-bottom: 1.25rem; border: 1px solid rgba(249, 168, 212, 0.35); border-radius: 0.5rem; }
+
+.review-row {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: space-between;
+  padding: 0.55rem 0.8rem;
+  font-size: 0.9rem;
+}
+
+.review-row + .review-row { border-top: 1px solid rgba(249, 168, 212, 0.2); }
+.review-row dt { flex: 0 0 38%; color: #f9a8d4; }
+.review-row dd { margin: 0; text-align: right; overflow-wrap: anywhere; }
+
+/* ---- Location search suggestions (homepage) ---- */
+.suggestions-box { text-align: left; }
+#modalLocationRow .suggestions-box { margin-top: 0.25rem; left: 0; right: 0; }
+.suggestion-item.is-active { background-color: #312e81; color: #ec4899; }
+
+.suggestion-note {
+  padding: 0.15rem 0.75rem;
+  color: #6b7280; /* gray-500 */
+  font-size: 9px;
+  line-height: 1.4;
+  text-align: right;
+}

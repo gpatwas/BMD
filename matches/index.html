@@ -4,8 +4,8 @@
     <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your DJ Matches in Bangalore | BookMyDJs</title>
-  <meta name="description" content="Your matched DJs in Bangalore from BookMyDJs. Review their profiles and connect directly to confirm your booking.">
+  <title>Request Received | BookMyDJs</title>
+  <meta name="description" content="Thank you for your DJ request. See what happens next and how to reach BookMyDJs directly.">
   <meta name="keywords" content="DJ matches Bangalore">
   <meta name="robots" content="noindex, follow">
   <link rel="canonical" href="https://bookmydjs.in/matches/">
@@ -17,16 +17,16 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="BookMyDJs">
   <meta property="og:locale" content="en_IN">
-  <meta property="og:title" content="Your DJ Matches in Bangalore | BookMyDJs">
-  <meta property="og:description" content="Your matched DJs in Bangalore from BookMyDJs. Review their profiles and connect directly to confirm your booking.">
+  <meta property="og:title" content="Request Received | BookMyDJs">
+  <meta property="og:description" content="Thank you for your DJ request. See what happens next and how to reach BookMyDJs directly.">
   <meta property="og:url" content="https://bookmydjs.in/matches/">
   <meta property="og:image" content="https://bookmydjs.in/Images/og-bookmydjs.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Your DJ Matches in Bangalore | BookMyDJs">
+  <meta property="og:image:alt" content="Request Received | BookMyDJs">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Your DJ Matches in Bangalore | BookMyDJs">
-  <meta name="twitter:description" content="Your matched DJs in Bangalore from BookMyDJs. Review their profiles and connect directly to confirm your booking.">
+  <meta name="twitter:title" content="Request Received | BookMyDJs">
+  <meta name="twitter:description" content="Thank you for your DJ request. See what happens next and how to reach BookMyDJs directly.">
   <meta name="twitter:image" content="https://bookmydjs.in/Images/og-bookmydjs.jpg">
   <script type="application/ld+json">
   {
@@ -162,8 +162,8 @@
       "@type": "WebPage",
       "@id": "https://bookmydjs.in/matches/#webpage",
       "url": "https://bookmydjs.in/matches/",
-      "name": "Your DJ Matches in Bangalore | BookMyDJs",
-      "description": "Your matched DJs in Bangalore from BookMyDJs. Review their profiles and connect directly to confirm your booking.",
+      "name": "Request Received | BookMyDJs",
+      "description": "Thank you for your DJ request. See what happens next and how to reach BookMyDJs directly.",
       "isPartOf": {
         "@id": "https://bookmydjs.in/#website"
       },
@@ -176,8 +176,7 @@
 }
   </script>
   
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-  <link rel="stylesheet" href="https://bookmydjs.in/css/whatsapp-cta.css">
+        <link rel="stylesheet" href="https://bookmydjs.in/css/bookmydjs.min.css">
        <style>
             body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -197,6 +196,21 @@
                 /* Carousel Styles */
 		.header h1 {
 			margin-top: 3rem;
+		}
+		.header .next-steps p {
+			font-size: 0.9rem;
+			line-height: 1.5;
+			color: #9ca3af;
+		}
+		/* Thank-you message and Featured DJ side by side on large screens, compact on phones */
+		.confirm-wrap .header { padding: 0; background: transparent; }
+		.confirm-wrap .header h1 { margin-top: 0; font-size: 1.6rem; line-height: 1.25; }
+		.confirm-wrap .header .next-steps p { font-size: 0.8rem; line-height: 1.45; }
+		.confirm-wrap .match-container { padding: 0; }
+		.confirm-wrap .match-header { margin-bottom: 1rem; }
+		.confirm-wrap .match-header h2 { font-size: 1.5rem; margin-bottom: 0.25rem; }
+		@media (min-width: 768px) {
+			.confirm-wrap .header h1 { font-size: 2rem; }
 		}
         .profile-image-container {
             position: relative;
@@ -276,6 +290,126 @@
         .carousel-dot.active {
             background-color: white;
         }
+
+        /* ---- Featured DJ card ---- */
+        .fdj-heading { text-align: center; margin-bottom: 1.1rem; }
+        .fdj-badge {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 6px 14px; border-radius: 9999px;
+            background: linear-gradient(135deg, #ec4899, #8b5cf6);
+            color: #fff; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+            box-shadow: 0 0 0 0 rgba(236, 72, 153, 0.55);
+            animation: fdjGlow 2.4s ease-out 0.6s 3;
+        }
+        .fdj-badge svg { width: 15px; height: 15px; color: #fde68a; }
+        .fdj-heading h2 { margin: 0.6rem 0 0.2rem; font-size: 1.5rem; font-weight: 800; color: #fff; line-height: 1.2; }
+        .fdj-heading p { color: #9ca3af; font-size: 0.95rem; }
+        .fdj-brief {
+            display: inline-flex; align-items: center; gap: 8px; margin-top: 0.5rem;
+            padding: 10px 18px; border-radius: 9999px; font-weight: 700; font-size: 0.95rem;
+            background: #25D366; color: #fff; text-decoration: none;
+            box-shadow: 0 10px 24px -10px rgba(37, 211, 102, 0.8);
+        }
+        .fdj-brief:hover { background: #1ebe5d; }
+        .fdj-brief svg { width: 18px; height: 18px; }
+        .fdj-brief[hidden] { display: none; }
+
+        .fdj-card {
+            max-width: 420px; margin: 0 auto; overflow: hidden; border-radius: 20px;
+            border: 2px solid transparent;
+            background: linear-gradient(#111827, #111827) padding-box,
+                        linear-gradient(135deg, #ec4899, #8b5cf6 55%, #22d3ee) border-box;
+            box-shadow: 0 24px 60px -24px rgba(236, 72, 153, 0.55);
+        }
+        .fdj .profile-image-container { height: 340px; border-radius: 18px 18px 0 0; }
+        .fdj .profile-image { height: 100%; border-radius: 0; box-shadow: none; }
+        .fdj .image-carousel { padding: 0; }
+        .fdj-photo-fade {
+            position: absolute; inset: 0; z-index: 2; pointer-events: none;
+            background: linear-gradient(to top, rgba(17, 24, 39, 0.95) 0%, rgba(17, 24, 39, 0.35) 38%, transparent 62%);
+        }
+        .fdj .profile-image.active { z-index: 1; }
+        .fdj-place {
+            position: absolute; top: 12px; left: 12px; z-index: 3;
+            display: inline-flex; align-items: center; gap: 4px;
+            padding: 4px 10px; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; color: #fff;
+            background: rgba(17, 24, 39, 0.6); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+        }
+        .fdj-place svg { width: 13px; height: 13px; color: #f472b6; }
+        .fdj .carousel-dots { top: 18px; bottom: auto; right: 14px; left: auto; width: auto; }
+        .fdj .carousel-dot { width: 7px; height: 7px; margin: 0 3px; }
+        .fdj .carousel-dot.active { width: 18px; border-radius: 9999px; background-color: #f472b6; }
+        .fdj .carousel-arrow {
+            display: flex; align-items: center; justify-content: center;
+            width: 36px; height: 36px; padding: 0; border-radius: 9999px;
+            background: rgba(17, 24, 39, 0.55); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+        }
+        .fdj .carousel-arrow svg { width: 20px; height: 20px; }
+        .fdj .carousel-arrow-prev { left: 10px; }
+        .fdj .carousel-arrow-next { right: 10px; }
+        .fdj .carousel-arrow:hover { background: rgba(236, 72, 153, 0.85); }
+        .fdj-name { position: absolute; left: 18px; right: 18px; bottom: 14px; z-index: 3; text-align: left; }
+        .fdj-name h3 { margin: 0; font-size: 1.75rem; font-weight: 800; color: #fff; line-height: 1.1; text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6); }
+        .fdj-name p { margin-top: 4px; font-size: 0.85rem; color: #f9a8d4; }
+
+        .fdj-body { padding: 16px 18px 20px; text-align: left; }
+        .fdj-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 14px; }
+        .fdj-stats li {
+            padding: 10px 6px; border-radius: 12px; text-align: center;
+            background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .fdj-stats strong { display: block; font-size: 1.1rem; font-weight: 800; color: #fff; line-height: 1.2; white-space: nowrap; }
+        .fdj-stats span { display: block; font-size: 0.7rem; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.06em; }
+        .fdj-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+        .fdj-chips li {
+            padding: 4px 10px; border-radius: 9999px; font-size: 0.75rem; color: #fbcfe8;
+            background: rgba(236, 72, 153, 0.12); border: 1px solid rgba(236, 72, 153, 0.35);
+        }
+        .fdj-bio {
+            font-size: 0.9rem; line-height: 1.6; color: #d1d5db;
+            display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+        }
+        .fdj-bio.is-open { display: block; -webkit-line-clamp: unset; }
+        .fdj-more { margin-top: 4px; padding: 0; border: 0; background: none; color: #f472b6; font-size: 0.85rem; font-weight: 600; cursor: pointer; }
+        .fdj-more:hover { color: #fff; }
+
+        .fdj-actions { margin-top: 16px; display: grid; gap: 10px; }
+        .fdj-btn-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        .fdj-btn {
+            display: flex; align-items: center; justify-content: center; gap: 8px;
+            padding: 12px 14px; border-radius: 12px; font-weight: 700; font-size: 0.95rem;
+            text-decoration: none; transition: transform 0.15s ease, background-color 0.2s ease, border-color 0.2s ease;
+        }
+        .fdj-btn svg { width: 18px; height: 18px; }
+        .fdj-btn:hover { transform: translateY(-1px); }
+        .fdj-btn--wa { background: #25D366; color: #fff; box-shadow: 0 10px 24px -10px rgba(37, 211, 102, 0.7); }
+        .fdj-btn--wa:hover { background: #1ebe5d; }
+        .fdj-btn--ghost { color: #fbcfe8; border: 1.5px solid rgba(236, 72, 153, 0.6); background: rgba(236, 72, 153, 0.06); }
+        .fdj-btn--ghost:hover { background: #db2777; border-color: #db2777; color: #fff; }
+
+        @keyframes fdjGlow {
+            0% { box-shadow: 0 0 0 0 rgba(236, 72, 153, 0.55); }
+            70% { box-shadow: 0 0 0 12px rgba(236, 72, 153, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(236, 72, 153, 0); }
+        }
+
+        /* ---- Thank-you section polish ---- */
+        .confirm-tick { animation: tickPop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both; box-shadow: 0 0 0 8px rgba(16, 185, 129, 0.08); }
+        @keyframes tickPop { from { transform: scale(0.4); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+        .confirm-wrap .next-steps li { border: 1px solid rgba(255, 255, 255, 0.06); }
+
+        @media (max-width: 480px) {
+            .fdj .profile-image-container { height: 268px; }
+            .fdj-heading { margin-bottom: 0.9rem; }
+            .fdj-heading p { font-size: 0.9rem; }
+            .fdj-heading h2 { font-size: 1.3rem; }
+            .fdj-name h3 { font-size: 1.5rem; }
+            .fdj-stats strong { font-size: 1rem; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .fdj-badge, .confirm-tick { animation: none; }
+            .fdj-btn:hover { transform: none; }
+        }
          </style>
     <link rel='stylesheet' id='dj-booking-style-css' href='https://bookmydjs.in/css/style.css' type='text/css' media='all' />
 <meta name="google-site-verification" content="90vA8XDeOQDOvXGCwfYu1cnt-voMwfCUgHX3Z3aEfsE" />
@@ -307,29 +441,30 @@
   <div class="max-w-7xl mx-auto flex justify-between items-center py-4 px-6 relative">
     <!-- Logo -->
     <a href="https://bookmydjs.in/">
-      <img width="235" height="108" decoding="async" class="w-28" src="https://bookmydjs.in/Images/Bmd_235X108-bg-removed.png" alt="BookMyDJs Logo">
+      <img width="235" height="108" decoding="async" class="w-28" src="https://bookmydjs.in/Images/bmd-logo-white.png" alt="BookMyDJs Logo">
     </a>
 
     <!-- Desktop Menu -->
-    <nav class="space-x-6 hidden md:flex items-center">
+    <nav class="space-x-6 hidden md:flex items-center" aria-label="Main menu">
       <a href="https://bookmydjs.in/" class="text-gray-100 hover:text-pink-300">Home</a>
-      <a href="https://bookmydjs.in/blogs/" class="text-gray-100 hover:text-pink-300">Blogs</a>
+      <div class="nav-dd">
+        <button type="button" class="nav-dd-btn" aria-haspopup="true">Events <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.17l3.71-3.94a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg></button>
+        <div class="nav-dd-menu"><div class="nav-dd-panel"><a href="https://bookmydjs.in/events/wedding-dj-bangalore/">Wedding DJs</a><a href="https://bookmydjs.in/events/sangeet-dj-bangalore/">Sangeet DJs</a><a href="https://bookmydjs.in/events/mehendi-dj-bangalore/">Mehendi DJs</a><a href="https://bookmydjs.in/events/reception-dj-bangalore/">Wedding Reception DJs</a><a href="https://bookmydjs.in/events/corporate-dj-bangalore/">Corporate Event DJs</a><a href="https://bookmydjs.in/events/birthday-dj-bangalore/">Birthday Party DJs</a><a href="https://bookmydjs.in/events/anniversary-dj-bangalore/">Anniversary Party DJs</a><a href="https://bookmydjs.in/events/house-party-dj-bangalore/">House Party DJs</a></div></div>
+      </div>
+      <div class="nav-dd">
+        <button type="button" class="nav-dd-btn" aria-haspopup="true">Areas <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.17l3.71-3.94a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg></button>
+        <div class="nav-dd-menu"><div class="nav-dd-panel nav-dd-panel--cols"><a href="https://bookmydjs.in/locations/dj-in-koramangala/">DJ in Koramangala</a><a href="https://bookmydjs.in/locations/dj-in-indiranagar/">DJ in Indiranagar</a><a href="https://bookmydjs.in/locations/dj-in-whitefield/">DJ in Whitefield</a><a href="https://bookmydjs.in/locations/dj-in-hsr-layout/">DJ in HSR Layout</a><a href="https://bookmydjs.in/locations/dj-in-marathahalli/">DJ in Marathahalli</a><a href="https://bookmydjs.in/locations/dj-in-electronic-city/">DJ in Electronic City</a><a href="https://bookmydjs.in/locations/dj-in-jp-nagar/">DJ in JP Nagar</a><a href="https://bookmydjs.in/locations/dj-in-jayanagar/">DJ in Jayanagar</a><a href="https://bookmydjs.in/locations/dj-in-btm-layout/">DJ in BTM Layout</a><a href="https://bookmydjs.in/locations/dj-in-sarjapur-road/">DJ in Sarjapur Road</a><a href="https://bookmydjs.in/locations/dj-in-bellandur/">DJ in Bellandur</a><a href="https://bookmydjs.in/locations/dj-in-mg-road/">DJ in MG Road</a><a href="https://bookmydjs.in/locations/dj-in-hebbal/">DJ in Hebbal</a><a href="https://bookmydjs.in/locations/dj-in-yelahanka/">DJ in Yelahanka</a><a href="https://bookmydjs.in/locations/dj-in-banashankari/">DJ in Banashankari</a><a href="https://bookmydjs.in/locations/dj-in-rajajinagar/">DJ in Rajajinagar</a><a href="https://bookmydjs.in/locations/dj-in-malleshwaram/">DJ in Malleshwaram</a><a href="https://bookmydjs.in/locations/dj-in-bannerghatta-road/">DJ in Bannerghatta Road</a><a href="https://bookmydjs.in/locations/dj-in-ulsoor/">DJ in Ulsoor</a><a href="https://bookmydjs.in/locations/dj-in-domlur/">DJ in Domlur</a></div></div>
+      </div>
+      <a href="https://bookmydjs.in/blogs/" class="text-gray-100 hover:text-pink-300">Blog</a>
       <a href="https://bookmydjs.in/contact/" class="text-gray-100 hover:text-pink-300">Contact</a>
       <!-- Join as DJ Button -->
-      <a href="https://bookmydjs.in/join-as-dj/" 
-         class="ml-4 bg-pink-600 text-white px-4 py-2 rounded-lg shadow hover:bg-pink-500 transition duration-200">
-        Join as DJ
-      </a>
+      <a href="https://bookmydjs.in/join-as-dj/" class="ml-4 bg-pink-600 text-white px-4 py-2 rounded-lg shadow hover:bg-pink-500 transition duration-200">Join as DJ</a>
     </nav>
 
     <!-- Mobile Menu Button -->
     <div class="md:hidden flex items-center space-x-3">
-      <!--Join as DJ Button for Mobile -->
-      <a href="https://bookmydjs.in/join-as-dj/" 
-         class="bg-pink-600 text-white px-3 py-2 rounded-lg shadow hover:bg-pink-500 transition duration-200 text-sm">
-        Join as DJ
-      </a>
-      <button id="menuToggle" class="text-pink-500 hover:text-pink-300 focus:outline-none">
+      <a href="https://bookmydjs.in/join-as-dj/" class="bg-pink-600 text-white px-3 py-2 rounded-lg shadow hover:bg-pink-500 transition duration-200 text-sm">Join as DJ</a>
+      <button id="menuToggle" class="text-pink-200 hover:text-white focus:outline-none" aria-label="Open menu">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
         </svg>
@@ -338,17 +473,21 @@
   </div>
 
   <!-- Mobile Dropdown Menu with Same Gradient -->
-  <div id="mobileMenu"
-       class="hidden absolute top-full left-0 w-full bg-gradient-to-r from-pink-700 via-purple-800 to-indigo-900 md:hidden flex-col space-y-2 py-4 px-6 z-50 shadow-lg">
+  <div id="mobileMenu" class="hidden absolute top-full left-0 w-full bg-gradient-to-r from-pink-700 via-purple-800 to-indigo-900 md:hidden flex-col space-y-2 py-4 px-6 z-50 shadow-lg">
     <a href="https://bookmydjs.in/" class="block text-gray-100 hover:text-pink-300 font-medium">Home</a>
-    <a href="https://bookmydjs.in/blogs/" class="block text-gray-100 hover:text-pink-300 font-medium">Blogs</a>
+    <details class="nav-acc">
+      <summary>Events</summary>
+      <div class="nav-acc-links"><a href="https://bookmydjs.in/events/wedding-dj-bangalore/">Wedding DJs</a><a href="https://bookmydjs.in/events/sangeet-dj-bangalore/">Sangeet DJs</a><a href="https://bookmydjs.in/events/mehendi-dj-bangalore/">Mehendi DJs</a><a href="https://bookmydjs.in/events/reception-dj-bangalore/">Wedding Reception DJs</a><a href="https://bookmydjs.in/events/corporate-dj-bangalore/">Corporate Event DJs</a><a href="https://bookmydjs.in/events/birthday-dj-bangalore/">Birthday Party DJs</a><a href="https://bookmydjs.in/events/anniversary-dj-bangalore/">Anniversary Party DJs</a><a href="https://bookmydjs.in/events/house-party-dj-bangalore/">House Party DJs</a></div>
+    </details>
+    <details class="nav-acc">
+      <summary>Areas</summary>
+      <div class="nav-acc-links nav-acc-links--cols"><a href="https://bookmydjs.in/locations/dj-in-koramangala/">DJ in Koramangala</a><a href="https://bookmydjs.in/locations/dj-in-indiranagar/">DJ in Indiranagar</a><a href="https://bookmydjs.in/locations/dj-in-whitefield/">DJ in Whitefield</a><a href="https://bookmydjs.in/locations/dj-in-hsr-layout/">DJ in HSR Layout</a><a href="https://bookmydjs.in/locations/dj-in-marathahalli/">DJ in Marathahalli</a><a href="https://bookmydjs.in/locations/dj-in-electronic-city/">DJ in Electronic City</a><a href="https://bookmydjs.in/locations/dj-in-jp-nagar/">DJ in JP Nagar</a><a href="https://bookmydjs.in/locations/dj-in-jayanagar/">DJ in Jayanagar</a><a href="https://bookmydjs.in/locations/dj-in-btm-layout/">DJ in BTM Layout</a><a href="https://bookmydjs.in/locations/dj-in-sarjapur-road/">DJ in Sarjapur Road</a><a href="https://bookmydjs.in/locations/dj-in-bellandur/">DJ in Bellandur</a><a href="https://bookmydjs.in/locations/dj-in-mg-road/">DJ in MG Road</a><a href="https://bookmydjs.in/locations/dj-in-hebbal/">DJ in Hebbal</a><a href="https://bookmydjs.in/locations/dj-in-yelahanka/">DJ in Yelahanka</a><a href="https://bookmydjs.in/locations/dj-in-banashankari/">DJ in Banashankari</a><a href="https://bookmydjs.in/locations/dj-in-rajajinagar/">DJ in Rajajinagar</a><a href="https://bookmydjs.in/locations/dj-in-malleshwaram/">DJ in Malleshwaram</a><a href="https://bookmydjs.in/locations/dj-in-bannerghatta-road/">DJ in Bannerghatta Road</a><a href="https://bookmydjs.in/locations/dj-in-ulsoor/">DJ in Ulsoor</a><a href="https://bookmydjs.in/locations/dj-in-domlur/">DJ in Domlur</a></div>
+    </details>
+    <a href="https://bookmydjs.in/blogs/" class="block text-gray-100 hover:text-pink-300 font-medium">Blog</a>
     <a href="https://bookmydjs.in/contact/" class="block text-gray-100 hover:text-pink-300 font-medium">Contact</a>
-    <!-- Join as DJ inside mobile dropdown -->
-    <a href="https://bookmydjs.in/join-as-dj/" 
-       class="block text-gray-100 hover:text-pink-300 font-semibold mt-2">
-      Join as DJ
-    </a>
-  </div></header>
+    <a href="https://bookmydjs.in/join-as-dj/" class="block text-gray-100 hover:text-pink-300 font-semibold mt-2">Join as DJ</a>
+  </div>
+</header>
 
 <!-- Toggle Script -->
 <script>
@@ -358,81 +497,120 @@
     mobileMenu.classList.toggle('hidden');
   });
 </script>
-    <!-- Loading Screen -->
-    <div class="loading-screen">
-        <div class="spinner"></div>
+<div class="confirm-wrap max-w-6xl mx-auto px-4 py-6 lg:py-12 grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+    <div class="header">
+    <div class="text-center">
+      <div class="confirm-tick mx-auto mb-3 flex items-center justify-center w-12 h-12 rounded-full bg-green-500 bg-opacity-20 text-green-400"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13l4 4L19 7"/></svg></div>
+      <h1 class="font-bold mb-2">Thank you! We've received your request</h1>
+      <p class="text-base text-gray-300 mb-5">Here's what happens next.</p>
+      <ol class="next-steps grid grid-cols-3 gap-3 text-center">
+        <li class="bg-gray-800 p-3 md:p-4 rounded-lg shadow-lg">
+          <span class="block text-pink-400 text-xl font-bold">1</span>
+          <h2 class="text-sm md:text-base font-semibold text-white mt-1">We review your details</h2>
+          <p class="hidden sm:block text-gray-400 mt-1">We look at your event, venue and music preferences.</p>
+        </li>
+        <li class="bg-gray-800 p-3 md:p-4 rounded-lg shadow-lg">
+          <span class="block text-pink-400 text-xl font-bold">2</span>
+          <h2 class="text-sm md:text-base font-semibold text-white mt-1">We get in touch</h2>
+          <p class="hidden sm:block text-gray-400 mt-1">We call or WhatsApp you on the number you shared to confirm the details.</p>
+        </li>
+        <li class="bg-gray-800 p-3 md:p-4 rounded-lg shadow-lg">
+          <span class="block text-pink-400 text-xl font-bold">3</span>
+          <h2 class="text-sm md:text-base font-semibold text-white mt-1">You get your quote</h2>
+          <p class="hidden sm:block text-gray-400 mt-1">You receive a free quote for your event, with no obligation to book.</p>
+        </li>
+      </ol>
+    </div>
     </div>
 
-    <div class="header py-20 bg-gray-950">
-    <div class="max-w-6xl mx-auto text-center">
-      <h1 class="text-3xl md:text-4xl font-bold mb-12">We've Found Your Perfect DJ Matches!</h1>
-        <p>Based on your requirements, here are the best DJs for your event</p>
-    </div>
-    </div>
-
-    <div class="match-container">
-        <div class="match-header">
-            <h2>Top Matching DJs</h2>
-            <p>Contact any of these professionals to discuss your event</p>
+    <div class="match-container fdj">
+        <div class="fdj-heading">
+            <span class="fdj-badge"><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M9.05 2.93c.3-.92 1.6-.92 1.9 0l1.07 3.29a1 1 0 00.95.69h3.46c.97 0 1.37 1.24.59 1.81l-2.8 2.03a1 1 0 00-.36 1.12l1.07 3.29c.3.92-.75 1.69-1.54 1.12l-2.8-2.03a1 1 0 00-1.17 0l-2.8 2.03c-.78.57-1.83-.2-1.53-1.12l1.07-3.29a1 1 0 00-.37-1.12l-2.8-2.03c-.78-.57-.38-1.81.6-1.81h3.45a1 1 0 00.95-.69l1.07-3.29z"/></svg> Featured DJ</span>
+            <h2>Talk to a DJ right now</h2>
+            <p id="fdjSubtitle">Can't wait for our call? Message him directly.</p>
+            <a id="briefWhatsApp" class="fdj-brief" href="https://wa.me/917278689435" target="_blank" rel="noopener" onclick="if(typeof gtag==='function'){gtag('event','whatsapp_click',{'send_to':'G-2MC0448GKR','event_category':'engagement','event_label':'matches_brief','transport_type':'beacon'});}" hidden><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Send my details on WhatsApp</a>
         </div>
 
-        <div class="match-grid">
-            <!-- DJ Profile 1 -->
-            <div class="dj-profile">
-                <div class="profile-image-container">
-                    <div class="image-carousel">
-                        <img width="1024" height="1024" decoding="async" src="https://bookmydjs.in/Images/DJ-Ravz_1.jpeg" loading="lazy" alt="DJ Ravz" class="profile-image active">
+        <article class="fdj-card" aria-label="Featured DJ: DJ Ravz">
+            <div class="profile-image-container">
+                <div class="image-carousel">
+                        <img width="1024" height="1024" decoding="async" src="https://bookmydjs.in/Images/DJ-Ravz_1.jpeg" fetchpriority="high" alt="DJ Ravz" class="profile-image active">
                         <img width="1600" height="2844" decoding="async" src="https://bookmydjs.in/Images/DJ-Ravz_2.jpeg" loading="lazy" alt="DJ Ravz Live On Stage" class="profile-image">
                         <img width="1620" height="1080" decoding="async" src="https://bookmydjs.in/Images/DJ-Ravz_3.jpeg" loading="lazy" alt="DJ Ravz Hands Up" class="profile-image">
                         <img width="1600" height="1067" decoding="async" src="https://bookmydjs.in/Images/DJ-Ravz_4.jpeg" loading="lazy" alt="DJ Ravz Hands up Live" class="profile-image">
-                    </div>
-                  <!-- Navigation arrows -->
-                    <button class="carousel-arrow carousel-arrow-prev">&#10094;</button>
-                    <button class="carousel-arrow carousel-arrow-next">&#10095;</button>
-                    <!-- Dots indicator -->
-                    <div class="carousel-dots"></div>
                 </div>
-                <div class="profile-content">
-                    <div class="profile-header">
-                        <h3>DJ Ravz (Gourav)</h3>
-                        <div class="match-percentage">98% Match</div>
-                 			</div>   
-                    <div class="rating">★★★★★ (4.9)</div>
-                    <div class="details">
-                        <p>Professional DJ with 8+ Years of Experience</p>
-                        <p>Introducing DJ Ravz, a dynamic disc jockey based in the vibrant city of Bangalore. With an extensive portfolio spanning all corners of India. With over 8 years of experience, he's a versatile maestro celebrated for seamlessly blending Bollywood, Punjabi, and commercial English hits. DJ Ravz specializes in corporate events, club nights, college fests, and the emotional crescendos of Sangeet, Mehendi, or Wedding celebrations. Having completed 500+ shows, his punctuality and competitive rates for top-tier sound, lighting, and stage setups in Bangalore set him apart. Make your occasion unforgettable with DJ Ravz, where music meets perfection.</p>
-                    </div>
-                    <p style="font-weight: bold;">Contact :</p>
-                    <a class="contact-button" href="tel:+917278689435">Call</a>
-                    <a class="contact-button" href="mailto:djravzofficial@gmail.com">Mail</a>
+                <div class="fdj-photo-fade" aria-hidden="true"></div>
+                <span class="fdj-place"><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg> Bangalore</span>
+                <button type="button" class="carousel-arrow carousel-arrow-prev" aria-label="Previous photo"><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M12.79 5.23a.75.75 0 01-.02 1.06L8.83 10l3.94 3.71a.75.75 0 11-1.04 1.08l-4.5-4.25a.75.75 0 010-1.08l4.5-4.25a.75.75 0 011.06.02z" clip-rule="evenodd"/></svg></button>
+                <button type="button" class="carousel-arrow carousel-arrow-next" aria-label="Next photo"><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.17 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clip-rule="evenodd"/></svg></button>
+                <div class="carousel-dots"></div>
+                <div class="fdj-name">
+                    <h3>DJ Ravz</h3>
+                    <p>Gourav &middot; Bollywood, Punjabi &amp; English hits</p>
                 </div>
             </div>
 
-            <!-- DJ Profile 2 -->
+            <div class="fdj-body">
+                <ul class="fdj-stats">
+                    <li><strong>10+</strong><span>Years</span></li>
+                    <li><strong>500+</strong><span>Shows</span></li>
+                    <li><strong>Pan-India</strong><span>Events</span></li>
+                </ul>
+                <ul class="fdj-chips" aria-label="Events"><li>Weddings</li><li>Sangeet</li><li>Mehendi</li><li>Corporate</li><li>Club nights</li><li>College fests</li></ul>
+                <p class="fdj-bio" id="fdjBio">Introducing DJ Ravz, a dynamic disc jockey based in the vibrant city of Bangalore. With an extensive portfolio spanning all corners of India. With over 10 years of experience, he's a versatile maestro celebrated for seamlessly blending Bollywood, Punjabi, and commercial English hits. DJ Ravz specializes in corporate events, club nights, college fests, and the emotional crescendos of Sangeet, Mehendi, or Wedding celebrations. Having completed 500+ shows, his punctuality and competitive rates for top-tier sound, lighting, and stage setups in Bangalore set him apart. Make your occasion unforgettable with DJ Ravz, where music meets perfection.</p>
+                <button type="button" class="fdj-more" aria-expanded="false" aria-controls="fdjBio">Read more</button>
 
-        </div>
-
+                <div class="fdj-actions">
+                    <a class="fdj-btn fdj-btn--wa" onclick="if(typeof gtag==='function'){gtag('event','whatsapp_click',{'send_to':'G-2MC0448GKR','event_category':'engagement','event_label':'matches_featured_dj','transport_type':'beacon'});}" href="https://wa.me/917278689435?text=Hi%20DJ%20Ravz%2C%20I%20just%20sent%20a%20DJ%20request%20on%20BookMyDJs." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> WhatsApp</a>
+                    <div class="fdj-btn-row">
+                        <a class="fdj-btn fdj-btn--ghost" href="tel:+917278689435"><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M2 3.5A1.5 1.5 0 013.5 2h1.15a1.5 1.5 0 011.46 1.14l.5 2.03a1.5 1.5 0 01-.43 1.45l-.93.88a11.03 11.03 0 005.26 5.26l.88-.93a1.5 1.5 0 011.45-.43l2.03.5A1.5 1.5 0 0118 13.35v1.15a1.5 1.5 0 01-1.5 1.5H15C8.1 16 2 9.9 2 4.5V3.5z"/></svg> Call</a>
+                        <a class="fdj-btn fdj-btn--ghost" href="mailto:djravzofficial@gmail.com"><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M3 4a2 2 0 00-2 2v.4l9 4.5 9-4.5V6a2 2 0 00-2-2H3z"/><path d="M19 8.62l-9 4.5-9-4.5V14a2 2 0 002 2h14a2 2 0 002-2V8.62z"/></svg> Mail</a>
+                    </div>
+                </div>
+            </div>
+        </article>
     </div>
+</div>
 
 <div class="flex justify-center mt-6">
   <button
     type="button"
     onclick="window.location.href='https://bookmydjs.in/'"
-    class="submit-button px-6 py-4 bg-pink-600 text-white rounded-lg hover:bg-pink-500 text-lg shadow-md mb-8">
-    Go Back to Home
+    class="px-6 py-3 border border-gray-600 text-gray-200 rounded-lg hover:border-pink-400 hover:text-white mb-10">
+    &larr; Back to Home
   </button>
 </div>
     <script>
-        // Loading screen
         window.addEventListener('load', function() {
-            setTimeout(function() {
-                document.querySelector('.loading-screen').style.display = 'none';
-            }, 2000);
            // Initialize carousels after page loads
             initCarousels();
         });
 
         // Carousel functionality
+        // After a booking request: WhatsApp buttons carry the customer's request details
+        (function () {
+            let brief = null;
+            try { brief = sessionStorage.getItem('bmdWhatsAppBrief'); } catch (e) { brief = null; }
+            if (!brief) return;
+            const url = 'https://wa.me/917278689435?text=' + encodeURIComponent(brief);
+            const briefButton = document.getElementById('briefWhatsApp');
+            briefButton.href = url;
+            briefButton.hidden = false;
+            document.getElementById('fdjSubtitle').hidden = true;
+            const cardButton = document.querySelector('.fdj-btn--wa');
+            if (cardButton) cardButton.href = url;
+        })();
+
+        // Featured DJ: show the full bio on request
+        document.querySelectorAll('.fdj-more').forEach((button) => {
+            const bio = document.getElementById(button.getAttribute('aria-controls'));
+            button.addEventListener('click', () => {
+                const open = bio.classList.toggle('is-open');
+                button.setAttribute('aria-expanded', String(open));
+                button.textContent = open ? 'Show less' : 'Read more';
+            });
+        });
+
         function initCarousels() {
             const profileContainers = document.querySelectorAll('.profile-image-container');
             
@@ -496,6 +674,16 @@
                 // Event listeners for arrows
                 nextBtn.addEventListener('click', nextSlide);
                 prevBtn.addEventListener('click', prevSlide);
+
+                // Swipe between photos on touch screens
+                let touchStartX = null;
+                container.addEventListener('touchstart', (e) => { touchStartX = e.touches[0].clientX; }, { passive: true });
+                container.addEventListener('touchend', (e) => {
+                    if (touchStartX === null) return;
+                    const dx = e.changedTouches[0].clientX - touchStartX;
+                    if (Math.abs(dx) > 40) (dx < 0 ? nextSlide : prevSlide)();
+                    touchStartX = null;
+                });
                 
                 // Auto-advance slides (optional)
                 let slideInterval = setInterval(nextSlide, 5000);
@@ -670,12 +858,6 @@
     </footer>
 
         <!-- Font Awesome for WhatsApp icon -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <!-- WhatsApp Floating Button -->
-<a href="https://wa.me/919481543530?text=Hi%2C%20I'm%20looking%20for%20a%20DJ." class="whatsapp-cta whatsapp-cta--icon" id="whatsappCTA" target="_blank" rel="noopener" aria-label="Chat with BookMyDJs on WhatsApp" onclick="if(typeof gtag==='function'){gtag('event','whatsapp_click',{'send_to':'G-2MC0448GKR','event_category':'engagement','event_label':'matches','transport_type':'beacon'});}">
-  <span class="cta-icon" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" focusable="false"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></span>
-</a>
-<script src="https://bookmydjs.in/js/whatsapp-cta.js" defer></script>
 </body>
 </html>

@@ -6,8 +6,7 @@
   <title>Page Not Found | BookMyDJs</title>
   <meta name="robots" content="noindex, follow">
   <link rel="icon" type="image/png" href="https://bookmydjs.in/Images/Bmd%20X300.png">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-  <link rel="stylesheet" href="https://bookmydjs.in/css/whatsapp-cta.css">
+  <link rel="stylesheet" href="https://bookmydjs.in/css/bookmydjs.min.css">
   <style>
     body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #0f172a; color: #e2e8f0; }
     .glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border-radius: 1rem; }
@@ -16,27 +15,51 @@
 <body>
 <header class="sticky top-0 z-50 bg-gradient-to-r from-pink-700 via-purple-800 to-indigo-900 shadow-lg">
   <div class="max-w-7xl mx-auto flex justify-between items-center py-4 px-6 relative">
+    <!-- Logo -->
     <a href="https://bookmydjs.in/">
-      <img width="235" height="108" decoding="async" class="w-28" src="https://bookmydjs.in/Images/Bmd_235X108-bg-removed.png" alt="BookMyDJs Logo">
+      <img width="235" height="108" decoding="async" class="w-28" src="https://bookmydjs.in/Images/bmd-logo-white.png" alt="BookMyDJs Logo">
     </a>
-    <nav class="space-x-6 hidden md:flex items-center">
+
+    <!-- Desktop Menu -->
+    <nav class="space-x-6 hidden md:flex items-center" aria-label="Main menu">
       <a href="https://bookmydjs.in/" class="text-gray-100 hover:text-pink-300">Home</a>
-      <a href="https://bookmydjs.in/blogs/" class="text-gray-100 hover:text-pink-300">Blogs</a>
+      <div class="nav-dd">
+        <button type="button" class="nav-dd-btn" aria-haspopup="true">Events <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.17l3.71-3.94a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg></button>
+        <div class="nav-dd-menu"><div class="nav-dd-panel"><a href="https://bookmydjs.in/events/wedding-dj-bangalore/">Wedding DJs</a><a href="https://bookmydjs.in/events/sangeet-dj-bangalore/">Sangeet DJs</a><a href="https://bookmydjs.in/events/mehendi-dj-bangalore/">Mehendi DJs</a><a href="https://bookmydjs.in/events/reception-dj-bangalore/">Wedding Reception DJs</a><a href="https://bookmydjs.in/events/corporate-dj-bangalore/">Corporate Event DJs</a><a href="https://bookmydjs.in/events/birthday-dj-bangalore/">Birthday Party DJs</a><a href="https://bookmydjs.in/events/anniversary-dj-bangalore/">Anniversary Party DJs</a><a href="https://bookmydjs.in/events/house-party-dj-bangalore/">House Party DJs</a></div></div>
+      </div>
+      <div class="nav-dd">
+        <button type="button" class="nav-dd-btn" aria-haspopup="true">Areas <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.17l3.71-3.94a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg></button>
+        <div class="nav-dd-menu"><div class="nav-dd-panel nav-dd-panel--cols"><a href="https://bookmydjs.in/locations/dj-in-koramangala/">DJ in Koramangala</a><a href="https://bookmydjs.in/locations/dj-in-indiranagar/">DJ in Indiranagar</a><a href="https://bookmydjs.in/locations/dj-in-whitefield/">DJ in Whitefield</a><a href="https://bookmydjs.in/locations/dj-in-hsr-layout/">DJ in HSR Layout</a><a href="https://bookmydjs.in/locations/dj-in-marathahalli/">DJ in Marathahalli</a><a href="https://bookmydjs.in/locations/dj-in-electronic-city/">DJ in Electronic City</a><a href="https://bookmydjs.in/locations/dj-in-jp-nagar/">DJ in JP Nagar</a><a href="https://bookmydjs.in/locations/dj-in-jayanagar/">DJ in Jayanagar</a><a href="https://bookmydjs.in/locations/dj-in-btm-layout/">DJ in BTM Layout</a><a href="https://bookmydjs.in/locations/dj-in-sarjapur-road/">DJ in Sarjapur Road</a><a href="https://bookmydjs.in/locations/dj-in-bellandur/">DJ in Bellandur</a><a href="https://bookmydjs.in/locations/dj-in-mg-road/">DJ in MG Road</a><a href="https://bookmydjs.in/locations/dj-in-hebbal/">DJ in Hebbal</a><a href="https://bookmydjs.in/locations/dj-in-yelahanka/">DJ in Yelahanka</a><a href="https://bookmydjs.in/locations/dj-in-banashankari/">DJ in Banashankari</a><a href="https://bookmydjs.in/locations/dj-in-rajajinagar/">DJ in Rajajinagar</a><a href="https://bookmydjs.in/locations/dj-in-malleshwaram/">DJ in Malleshwaram</a><a href="https://bookmydjs.in/locations/dj-in-bannerghatta-road/">DJ in Bannerghatta Road</a><a href="https://bookmydjs.in/locations/dj-in-ulsoor/">DJ in Ulsoor</a><a href="https://bookmydjs.in/locations/dj-in-domlur/">DJ in Domlur</a></div></div>
+      </div>
+      <a href="https://bookmydjs.in/blogs/" class="text-gray-100 hover:text-pink-300">Blog</a>
       <a href="https://bookmydjs.in/contact/" class="text-gray-100 hover:text-pink-300">Contact</a>
+      <!-- Join as DJ Button -->
       <a href="https://bookmydjs.in/join-as-dj/" class="ml-4 bg-pink-600 text-white px-4 py-2 rounded-lg shadow hover:bg-pink-500 transition duration-200">Join as DJ</a>
     </nav>
+
+    <!-- Mobile Menu Button -->
     <div class="md:hidden flex items-center space-x-3">
       <a href="https://bookmydjs.in/join-as-dj/" class="bg-pink-600 text-white px-3 py-2 rounded-lg shadow hover:bg-pink-500 transition duration-200 text-sm">Join as DJ</a>
-      <button id="menuToggle" class="text-pink-500 hover:text-pink-300 focus:outline-none">
+      <button id="menuToggle" class="text-pink-200 hover:text-white focus:outline-none" aria-label="Open menu">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
         </svg>
       </button>
     </div>
   </div>
+
+  <!-- Mobile Dropdown Menu with Same Gradient -->
   <div id="mobileMenu" class="hidden absolute top-full left-0 w-full bg-gradient-to-r from-pink-700 via-purple-800 to-indigo-900 md:hidden flex-col space-y-2 py-4 px-6 z-50 shadow-lg">
     <a href="https://bookmydjs.in/" class="block text-gray-100 hover:text-pink-300 font-medium">Home</a>
-    <a href="https://bookmydjs.in/blogs/" class="block text-gray-100 hover:text-pink-300 font-medium">Blogs</a>
+    <details class="nav-acc">
+      <summary>Events</summary>
+      <div class="nav-acc-links"><a href="https://bookmydjs.in/events/wedding-dj-bangalore/">Wedding DJs</a><a href="https://bookmydjs.in/events/sangeet-dj-bangalore/">Sangeet DJs</a><a href="https://bookmydjs.in/events/mehendi-dj-bangalore/">Mehendi DJs</a><a href="https://bookmydjs.in/events/reception-dj-bangalore/">Wedding Reception DJs</a><a href="https://bookmydjs.in/events/corporate-dj-bangalore/">Corporate Event DJs</a><a href="https://bookmydjs.in/events/birthday-dj-bangalore/">Birthday Party DJs</a><a href="https://bookmydjs.in/events/anniversary-dj-bangalore/">Anniversary Party DJs</a><a href="https://bookmydjs.in/events/house-party-dj-bangalore/">House Party DJs</a></div>
+    </details>
+    <details class="nav-acc">
+      <summary>Areas</summary>
+      <div class="nav-acc-links nav-acc-links--cols"><a href="https://bookmydjs.in/locations/dj-in-koramangala/">DJ in Koramangala</a><a href="https://bookmydjs.in/locations/dj-in-indiranagar/">DJ in Indiranagar</a><a href="https://bookmydjs.in/locations/dj-in-whitefield/">DJ in Whitefield</a><a href="https://bookmydjs.in/locations/dj-in-hsr-layout/">DJ in HSR Layout</a><a href="https://bookmydjs.in/locations/dj-in-marathahalli/">DJ in Marathahalli</a><a href="https://bookmydjs.in/locations/dj-in-electronic-city/">DJ in Electronic City</a><a href="https://bookmydjs.in/locations/dj-in-jp-nagar/">DJ in JP Nagar</a><a href="https://bookmydjs.in/locations/dj-in-jayanagar/">DJ in Jayanagar</a><a href="https://bookmydjs.in/locations/dj-in-btm-layout/">DJ in BTM Layout</a><a href="https://bookmydjs.in/locations/dj-in-sarjapur-road/">DJ in Sarjapur Road</a><a href="https://bookmydjs.in/locations/dj-in-bellandur/">DJ in Bellandur</a><a href="https://bookmydjs.in/locations/dj-in-mg-road/">DJ in MG Road</a><a href="https://bookmydjs.in/locations/dj-in-hebbal/">DJ in Hebbal</a><a href="https://bookmydjs.in/locations/dj-in-yelahanka/">DJ in Yelahanka</a><a href="https://bookmydjs.in/locations/dj-in-banashankari/">DJ in Banashankari</a><a href="https://bookmydjs.in/locations/dj-in-rajajinagar/">DJ in Rajajinagar</a><a href="https://bookmydjs.in/locations/dj-in-malleshwaram/">DJ in Malleshwaram</a><a href="https://bookmydjs.in/locations/dj-in-bannerghatta-road/">DJ in Bannerghatta Road</a><a href="https://bookmydjs.in/locations/dj-in-ulsoor/">DJ in Ulsoor</a><a href="https://bookmydjs.in/locations/dj-in-domlur/">DJ in Domlur</a></div>
+    </details>
+    <a href="https://bookmydjs.in/blogs/" class="block text-gray-100 hover:text-pink-300 font-medium">Blog</a>
     <a href="https://bookmydjs.in/contact/" class="block text-gray-100 hover:text-pink-300 font-medium">Contact</a>
     <a href="https://bookmydjs.in/join-as-dj/" class="block text-gray-100 hover:text-pink-300 font-semibold mt-2">Join as DJ</a>
   </div>
@@ -49,7 +72,7 @@
 <main class="max-w-3xl mx-auto py-20 px-4 text-center">
   <h1 class="text-4xl md:text-5xl font-bold mb-6">Page Not Found</h1>
   <p class="text-lg text-gray-300 mb-8">Sorry, we couldn't find that page. Find the perfect DJ in Bangalore below.</p>
-  <a href="https://bookmydjs.in/" class="inline-block bg-pink-600 hover:bg-pink-500 text-white px-8 py-4 rounded-lg text-lg shadow font-semibold">Get Free DJ Quotes</a>
+  <a href="https://bookmydjs.in/?book=1#book" class="inline-block bg-pink-600 hover:bg-pink-500 text-white px-8 py-4 rounded-lg text-lg shadow font-semibold">Get Free DJ Quotes</a>
   <p class="mt-10 space-x-3"><a href="https://bookmydjs.in/events/wedding-dj-bangalore/" class="text-pink-400 hover:underline">Wedding DJs</a> <a href="https://bookmydjs.in/events/sangeet-dj-bangalore/" class="text-pink-400 hover:underline">Sangeet DJs</a> <a href="https://bookmydjs.in/events/mehendi-dj-bangalore/" class="text-pink-400 hover:underline">Mehendi DJs</a> <a href="https://bookmydjs.in/events/reception-dj-bangalore/" class="text-pink-400 hover:underline">Wedding Reception DJs</a></p>
 </main>
 <footer class="bg-gray-900 text-gray-300">

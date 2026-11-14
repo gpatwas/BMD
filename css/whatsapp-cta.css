@@ -110,7 +110,27 @@
   height: 30px;
 }
 
-@media (max-width: 480px) {
-  .whatsapp-cta.whatsapp-cta--icon { width: 52px; height: 52px; }
-  .whatsapp-cta--icon .cta-icon svg { width: 28px; height: 28px; }
+/* Phones: every page shows the round icon-only button (the label stays available to screen readers via aria-label) */
+@media (max-width: 640px) {
+  .whatsapp-cta,
+  .whatsapp-cta.whatsapp-cta--icon {
+    gap: 0;
+    padding: 0;
+    width: 56px;
+    height: 56px;
+    justify-content: center;
+  }
+  .whatsapp-cta .cta-text { display: none; }
+  .whatsapp-cta .cta-icon,
+  .whatsapp-cta--icon .cta-icon {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    color: #fff;
+  }
+  .whatsapp-cta .cta-icon svg,
+  .whatsapp-cta--icon .cta-icon svg {
+    width: 30px;
+    height: 30px;
+  }
 }
