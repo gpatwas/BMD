@@ -1,4 +1,5 @@
-/* Contact and Join forms: send in the background, show the result on the page, and count the lead in GA4.
+/* Contact and Join forms: send in the background and show the result on the page.
+   Only customer enquiries (the contact form) count as a lead in GA4; DJ sign-ups are not leads.
    Without JavaScript the forms post to Formspree as before. */
 document.querySelectorAll('form[action^="https://formspree.io/"]').forEach(function (form) {
   const note = document.createElement('p');
@@ -16,8 +17,9 @@ document.querySelectorAll('form[action^="https://formspree.io/"]').forEach(funct
     fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } })
       .then(function (response) {
         if (!response.ok) throw new Error('Form submission failed');
-        if (typeof gtag === 'function') {
-          gtag('event', 'generate_lead', { send_to: 'G-2MC0448GKR', form_name: form.dataset.formName || 'contact' });
+        const formName = form.dataset.formName || 'contact';
+        if (formName !== 'join_as_dj' && typeof gtag === 'function') {
+          gtag('event', 'generate_lead', { send_to: 'G-2MC0448GKR', form_name: formName });
         }
         form.hidden = true;
         note.className = 'form-note form-note--ok';
