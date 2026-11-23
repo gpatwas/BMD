@@ -601,6 +601,20 @@
             if (cardButton) cardButton.href = url;
         })();
 
+        // Phone taps: count clicks on any tel: link as a GA4 "phone_click" event (no phone number is sent)
+        document.addEventListener('click', function (e) {
+            const link = e.target.closest ? e.target.closest('a[href^="tel:"]') : null;
+            if (!link || typeof gtag !== 'function') return;
+            gtag('event', 'phone_click', {
+                send_to: 'G-2MC0448GKR',
+                event_category: 'engagement',
+                event_label: link.classList.contains('fdj-btn') ? 'matches_featured_dj' : 'matches',
+                link_location: link.closest('footer') ? 'footer' : 'page',
+                phone_line: link.getAttribute('href').indexOf('9481543530') > -1 ? 'bookmydjs' : 'dj_ravz',
+                transport_type: 'beacon'
+            });
+        });
+
         // Featured DJ: show the full bio on request
         document.querySelectorAll('.fdj-more').forEach((button) => {
             const bio = document.getElementById(button.getAttribute('aria-controls'));
